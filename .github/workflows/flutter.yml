@@ -16,10 +16,11 @@ jobs:
           channel: 'stable'
           flutter-version: '3.x' # Use latest stable version 3.x
 
-      - run: flutter pub get
-
-      - name: Build Android (AAB)
-        run: flutter build appbundle
+      - run: |
+          flutter pub get
+          flutter pub upgrade
+      # - name: Build Android (AAB)
+      #   run: flutter build appbundle
 
       - name: Build iOS (IPA)
         run: flutter build ipa
