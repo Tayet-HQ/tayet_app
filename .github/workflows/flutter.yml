@@ -15,10 +15,7 @@ jobs:
         with:
           channel: 'stable'
           flutter-version: '3.x' # Use latest stable version 3.x
-
-      - run: |
-          flutter pub get
-          flutter pub upgrade
+      - run: flutter pub get
       # - name: Build Android (AAB)
       #   run: flutter build appbundle
 
